@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New HMTL document by NewJect</title>
+<style>
+
+.picture
+{
+width:400px;
+height:266px;
+top:10px;
+left:10px;
+position:absolute;
+}
+</style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".picture").hide();
+        $(".picture:first").fadeIn(1000);
+        $(".picture").click(function(){
+           $(this).fadeOut(1000);
+            var next=($(this).next().length)?$(this).next():$(".picture:first");
+                        next.fadeIn(1000);
+        });
+        
+
+        
+    });
+    
+    </script>
+
+</head>
+<body>
+<img class="picture" src="natural1.jpg">
+<img class="picture" src="flower1.jpg">
+<img class="picture" src="natural2.jpg">
+<img class="picture" src="flower2.jpg">
+<img class="picture" src="flower3.jpg">
+    
+    
+</body>
+</html>

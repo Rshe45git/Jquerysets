@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DisableButton Once Clicked</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.button').click(function(){
+            var todo=$(this).text();
+            var para=$('p');
+            if (todo=="Bold"){
+                para.css("font-weight" , "bold");
+            }else if(todo=="Italic"){
+                para.css("font-style" , "italic");
+            }else {
+                para.css("text-decoration" , "underline");
+            }
+            $(this).prop("disabled" , true);
+        });
+        
+    });
+    </script>
+
+</head>
+<body>
+
+    <p style="text-align: justify;">Plain text exclusively consists of character representation. Each character is represented by a fixed-length sequence of one, two, or four bytes, or as a variable-length sequence of one to four bytes, in accordance to specific character encoding conventions, such as ASCII, ISO/IEC 2022, UTF-8, or Unicode. These conventions define many printable characters, but also non-printing characters that control the flow of the text, such as space, line break, and page break. Plain text contains no other information about the text itself, not even the character encoding convention employed. Plain text is stored in text files, although text files do not exclusively store plain text. In the early days of computers, plain text was displayed using a monospace font, such that horizontal alignment and columnar formatting were sometimes done using whitespace characters. For compatibility reasons, this tradition has not changed.</p>
+    
+    <button class="button">Bold</button>
+    <button class="button">Italic</button>
+    <button class="button">Underline</button>
+
+</body>
+</html>

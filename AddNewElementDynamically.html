@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add New Element Dynamically</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var newButton=$("<button>ClickMe</button>");
+        newButton.attr("id","btnClick").appendTo("body");
+        $("#btnClick").click(function(){
+           $("#result").html("New Text !!!!"); 
+            
+        });
+        var newHeading =$("<h1>Jquery is powerful</h1>");
+        newHeading.appendTo("body");
+    });
+    
+    </script>
+
+</head>
+<body>
+
+<div id="result">Result goes here</div>
+
+</body>
+</html>

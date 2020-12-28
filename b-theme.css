@@ -1,0 +1,29 @@
+body{
+	background: #ffccff;
+}
+h1{
+	text-align: center;
+	color: #ff00ff;
+	font-size: 40px;
+}
+p{
+	text-align:center;
+	font-size:25px;
+}
+fieldset{
+			width:350px;
+			margin: 0px auto;
+		}
+		ul{
+			list-style-type: none;
+		}
+		li{
+			display: inline;
+		}
+		a{
+			font-size: 20px;
+			background-color: black;
+			color: white;
+			padding: 5px;
+			text-decoration: none;
+		}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Moving Elements from one place to Another</title>
+    <style>
+        .parent{
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            background: lightblue;
+            margin: 10px;
+            float: left
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: darkblue;
+            margin: 5px;
+            float: left
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="lesson5.js"></script>-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#btnclick").click(function(){
+        //$("#parent2").append("<div class='child'></div>");
+        $("#parent2").append($("#child2"));
+    })
+})   
+    
+</script>
+
+</head>
+    
+<body>
+
+<div id="parent1" class="parent">
+    <div id="child1" class="child" style="background: red"></div>
+    <div id="child2" class="child" style="background: blue"></div>
+</div>
+    
+    <div id="parent2" class="parent">
+        <div id="child3" class="child" style="background: green"></div>
+    </div>
+<button id="btnclick">click</button>
+</body>
+</html>

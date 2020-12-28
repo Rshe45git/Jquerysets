@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        fieldset{
+            width: 350px;
+            margin: 0px auto;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            display: inline;
+        }
+        1{
+            font-size: 20px;
+            background: black;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="default.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("a").click(function(){
+            $("link").attr("href",$(this).attr("rel"));
+        })
+    });
+    </script>
+
+</head>
+<body>
+    <fieldset>
+        <legend>Style switcher</legend>
+    <ul>
+        <li><a href="#" rel="default.css">Default theme</a></li>
+        <li><a href="#" rel="a-theme.css">Theme A</a></li>
+        <li><a href="#" rel="b-theme.css">Theme B</a></li>
+    </ul>    
+        
+    
+    
+    </fieldset>
+<div id="box">
+    <h1>The Title</h1>
+    <h2>First Sub heading</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ... of Lorem Ipsum available, but the majority have suffered alteration in some form  </p>
+    <h2>Second Section</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ... of Lorem Ipsum available, but the majority have suffered alteration in some form  </p>
+    <h2>Third Section</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ... of Lorem Ipsum available, but the majority have suffered alteration in some form  </p>
+    <h2>Fourth Section</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ... of Lorem Ipsum available, but the majority have suffered alteration in some form  </p>
+    
+</div>
+</body>
+</html>

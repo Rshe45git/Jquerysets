@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Generate List From Array</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="lesson5.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var names = $("#names");
+        var students = ["John Smith", "Aaron White", "Hannah Taylor", "Sarah Wilson", "Aidan Thomas"];
+        $.each(students, function(index, value){
+            names.append($("<li>" + value + "</li>"));
+            
+        });
+        /*$.each(students, function(index, value){
+            names.append($("<li>" + value + "</li>"));
+        });*/
+    });
+    </script>
+    
+</head>
+<body>
+<h2>Students</h2>
+<ol id="names"></ol>
+
+</body>
+</html>

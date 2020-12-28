@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+         #box
+            {
+                width: 250px;
+                height: 250px;
+                border: 1px solid black;
+                background: purple;
+            }
+        </style>
+        <title>Practice disable Rt Mouse click</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        //<script src="lesson5.js"></script>
+        <script script type="text/javascript">
+            $(document).ready(function(){
+                
+                $("button").click(function(){
+                    var $box=$("#box");--cashe 
+                if($('#box').is(':hidden')){
+                    $('#box').prop("hidden",false);
+                   $('#box').animate({"height":"100px","widht":"100px"},5000,function(){
+                        $('#box').css("background", "pink");
+                      /*$box.animate({"height":"100px", "width":"100px"}, 5000, function(){
+                        $box.css("background", "pink");*/
+                    })
+                }
+                });
+                
+            
+               
+            });
+
+        </script>
+    </head>
+    <body>
+        <div id="box" hidden></div>
+        <button>Clickme!</button>
+
+    </body>
+</html>

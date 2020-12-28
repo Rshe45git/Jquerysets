@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Practice disable Rt Mouse click</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    //<script src="lesson5.js"></script>
+<script script type="text/javascript">
+    $(document).ready(function(){
+       /* $(document).contextmenu(function(){
+            return false
+        })*/
+        $('img').contextmenu(function(){
+            alert("Right button is Clicked");
+        })
+    })
+
+</script>
+</head>
+<body>
+<img src="natural1.jpg"/>
+
+</body>
+</html>

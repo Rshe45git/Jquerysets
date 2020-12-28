@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blinking Box</title>
+    <style>
+        #box
+        {
+            width:150px;
+            height:150px;
+            border:1px solid black;
+            background:purple;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+        var i=0;
+    $(document).ready(function(){
+        
+        blinkBox();
+    });
+        //var i=0;
+        function blinkBox(){
+            var color =(i%2==0) ?"white" :"purple";
+            $("#box").css("background" , color);
+            setTimeout(blinkBox, 500);
+            i++;
+        };
+    </script>
+
+
+
+</head>
+<body>
+
+<div id="box"></div>
+
+</body>
+</html>

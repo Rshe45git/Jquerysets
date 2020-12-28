@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New HMTL document by NewJect</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("input[type='checkbox']").attr("checked", false);
+        $("input[type='checkbox']").click(function(){
+        var amount=0;
+            $("input:checked").each(function(){
+                var value = $(this).attr("value")*1;
+                //alert(value);
+                amount += value;
+            });
+            $("#result").html("<b> Total amount: $" + amount);
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="Cream" value="1">Ice Cream ($1)
+    <input type="checkbox" id="Burger" value="2">Burger ($2)
+    <input type="checkbox" id="Fries" value="3">French Fries($3)
+    <input type="checkbox" id="Piza" value="4">Piza ($4) <br /> <br />
+    
+    <div id="result"><b>Total Amount: $0</b></div>
+
+</body>
+</html>

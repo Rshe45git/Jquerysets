@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkbox checkall</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#checkall").click(function(){
+            $("input[type=checkbox]").prop("checked" ,$("#checkall").is(":checked")); 
+        });
+    });
+    </script>
+
+</head>
+<body>
+
+<div><input type="checkbox" id="checkall"><b>All</b></div>
+    <div><input type="checkbox">Java</div>
+    <div><input type="checkbox">Jscript</div>
+    <div><input type="checkbox">Dotnet</div>
+    <div><input type="checkbox">Jquery</div>
+    <div><input type="checkbox">Hadoob</div>
+    <div><input type="checkbox">Bigdata</div>
+    <div><input type="checkbox">HTMLCSS</div>
+    <div><input type="checkbox">Weblogic</div>
+    <div><input type="checkbox">Cyber Security</div>
+    <div><input type="checkbox">Networking</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blur and Brighten</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var image=$("img");
+        image.css("opacity" , .3);
+        /*image.onmouseover(function(){
+            image.css("opacity" , 1);
+        });*/
+        image.mouseover(function(){
+            image.css("opacity" , 1); 
+        });
+        image.mouseout(function(){
+            image.css("opacity" , .3); 
+        });
+        image.mousedown(function(){
+            image.css("width" ,$(this).width()+50);
+            image.css("height" ,$(this).height()+50);
+        })
+    });
+    
+    </script>
+
+</head>
+<body>
+
+<img src="flower1.jpg">
+</body>
+</html>

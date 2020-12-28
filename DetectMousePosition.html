@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>New HMTL document by NewJect</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        /*$(document).mousemove(function(e){
+            $("#position").html("The x axis" +e.pageX+"<br></br> The Y axis" +e.pageY);
+            $("img").css({left:e.pageX,top:e.pageY})
+        });*/
+        
+        $(document).click(function(e){
+            $("#position").html("The x axis" +e.pageX+"<br></br> The Y axis" +e.pageY);
+            $("img").css({left:e.pageX,top:e.pageY})
+        });
+    });
+    </script>
+
+</head>
+<body>
+    <div style="position: relative">
+        <img src="natural1.jpg" style="position: absolute; left: 40px; top: 40px"/>
+        <div id="position">Result goes here</div>
+    </div>
+
+
+
+</body>
+</html>
