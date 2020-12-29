@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scroll To the required Element</title>
+    <style>
+        #box
+        {
+            width:400px;
+            height:400px;
+            border:4px solid black;
+            overflow: auto;
+            margin:auto;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var $container=$("#box");
+        //alert($container.offset().top);
+        //$container.scrollTop($("#myElement").offset().top-$container.offset().top);
+        /*$container.animate({
+            scrollTop: $("#myElement").offset().top-$container.offset().top;
+            //scrollTop: $("myElement").offset().top;
+        },1000);*/
+        /*$container.animate({
+
+            scrollTop: $("#myElement").offset().top - $container.offset().top
+        }, 1000);*/
+        $container.animate({
+            scrollTop: $("#myElement").offset().top - $container.offset().top
+        }, 1000);
+
+    });
+    </script>
+
+</head>
+<body>
+
+<div id="box">
+    <h4>First Section</h4>
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing. And typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+    <h4>Second Section</h4>
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing. And typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+    <h4>Third Section</h4>
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing. And typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+    <h4 id="myElement">Fourth Section</h4>
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing. And typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+    <h4>Fifth Section</h4>
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing. And typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+
+</div>
+
+</body>
+</html>

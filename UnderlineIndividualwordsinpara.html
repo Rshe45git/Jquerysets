@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Underline Individual words in a para</title>
+    <style>
+        p{
+            font: 30px;
+            width: 400px;
+            height: 450px;
+            margin: 0px auto;
+            text-align: justify;
+            /*text-decoration: underline;*/
+        }
+        p span{
+            text-decoration: underline
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("p").each(function(){
+           var words=$(this).text().split(" ");
+            $(this).empty();
+            for(var i=0; i<words.length; i++){
+                if (words[i].slice(-1)=="."){
+                    $(this).append(" <span>" + words[i].slice(0,-1) + "</span>" +words[i].slice(-1));
+                }else{
+                    $(this).append(" <span>" + words[i] + "</span>");
+                }
+
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing. And typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the</p>
+
+</body>
+</html>

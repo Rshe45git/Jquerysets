@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Refresh Content Without Reloading Page</title>
+
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+        //var i=0;
+    $(document).ready(function(){
+        refreshcontent();
+    });
+        var quoteArr = [];
+        quoteArr[0] = "The best preparation for tomorrow is doing your best today.";
+        quoteArr[1] = "Every accomplishment starts with the decision to try.";
+        quoteArr[2] = "Try to be a rainbow in someone's cloud.";
+        quoteArr[3] = "Nurture your mind with great thoughts.";
+        quoteArr[4] = "A goal without a plan is just a wish.";
+        quoteArr[5] = "We become what we think about.";
+        quoteArr[6] = "The sure way to miss success is to miss the opportunity.";
+        quoteArr[7] = "The best way to prepare for life is to begin to live.";
+        quoteArr[8] = "What hurts you today makes you stronger tomorrow.";
+        quoteArr[9] = "The best way to make your dreams come true is to wake up.";
+        quoteArr[10] = "A person who never made a mistake never tried anything new.";
+        quoteArr[11] = "Life is about making an impact, not making an income.";
+        quoteArr[12] = "Life isn't about getting and having, it's about giving and being.";
+
+
+    function refreshcontent(){
+        //$("#content").html("new content: " +i);
+        //setTimeout(refreshcontent,1000);
+       // i=i+10;
+        var randomquote=Math.floor(Math.random() * quoteArr.length);
+        //var randomquote = Math.floor(Math.random() * quoteArr.length);
+        $("#content").html(quoteArr[randomquote]);
+        setTimeout(refreshcontent,2000);
+    }
+    </script>
+<div id="content" style="font-size: 30px"></div>
+    <img src="natural1.jpg" />
+</body>
+</html>
