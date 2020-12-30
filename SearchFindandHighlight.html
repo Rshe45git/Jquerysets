@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search Find and Highlight</title>
+    <style>
+        .highlight{
+            background: yellow;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#search").keyup(function(){
+            searchHighlight($(this).val());  
+        });
+        
+    });
+        function searchHighlight(searchText){
+            if(searchText){
+            var content=$("p").text();
+            var searchExp=new RegExp(searchText, "ig");
+            var matches=content.match(searchExp);
+                if(matches){
+                    $("p").html(content.replace(searchExp,function(match){
+                        return "<span class='highlight'>" +match+ "</span>";
+                    }));
+                }else{
+                    $(".highlight").removeClass("highlight"); 
+                }
+            }
+            else{
+                $(".highlight").removeClass("highlight");
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="search" type="text">
+    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing. And typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+</body>
+</html>
