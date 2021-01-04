@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table with Sortable Column</title>
+    <style>
+        .clickable{
+            cursor: pointer;
+            background: purple;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="lesson5.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#tbl1 th").each(function(column){
+            $(this).hover(function(){
+                $(this).data("type", $(this).attr("class"));
+            
+                $(this).addClass("clickable");
+            },function(){
+                $(this).removeClass("clickable");
+            });
+            $(this).click(function(){
+                //var clicked=false;
+                var type=$(this).data("type");
+                //var records=$("#tbl1, #tbl2").find("tbody > tr");
+    
+               // var records=$("#tbl1, #tbl2").find("tbody > tr");
+                //var records=$("#tbl1 tbody, #tbl2 tbody").find("tr");
+                //var records=$(this).closest("table").find("tbody > tr");
+                var records1=$("#tbl1").find("tbody > tr");
+                var records2=$("#tbl2").find("tbody > tr");
+                //var records=$(this).closest("#tbl1, #tbl2").attr("table").find("tbody > tr");
+                //var records=$(this).parent("table").find("tbody > tr");
+                records1.sort(function(a,b){
+                    debugger;
+                    var value1=$(a).children("td").eq(column).text();
+                    debugger;
+                    var value2=$(b).children("td").eq(column).text();
+                    debugger;
+                    if (type=='num1'){
+                        value1 *=1;
+                        value2 *=1;
+                    }
+                    return (value1 < value2) ? -1 : (value1 > value2 ? 1 :0); 
+                    debugger;
+                });
+                records2.sort(function(a,b){
+                    debugger;
+                    var value1=$(a).children("td").eq(column).text();
+                    debugger;
+                    var value2=$(b).children("td").eq(column).text();
+                    debugger;
+                    if (type=='num1'){
+                        value1 *=1;
+                        value2 *=1;
+                    }
+                    return (value1 < value2) ? -1 : (value1 > value2 ? 1 :0); 
+                    debugger;
+                });
+                $.each(records1, function(index, row){
+                    
+                    var id = $(this).closest("table").attr("id");
+                    debugger;
+                    $(this).closest("#" +id + " tbody").append(row);
+
+                });
+            });
+        });
+        $("#tbl2 th").each(function(column){
+            $(this).hover(function(){
+                $(this).data("type", $(this).attr("class"));
+            
+                $(this).addClass("clickable");
+            },function(){
+                $(this).removeClass("clickable");
+            });
+            $(this).click(function(){
+                //var clicked=false;
+                var type=$(this).data("type");
+                //var records=$("#tbl1, #tbl2").find("tbody > tr");
+    
+               // var records=$("#tbl1, #tbl2").find("tbody > tr");
+                //var records=$("#tbl1 tbody, #tbl2 tbody").find("tr");
+                //var records=$(this).closest("table").find("tbody > tr");
+                //var records1=$("#tbl1").find("tbody > tr");
+                var records2=$("#tbl2").find("tbody > tr");
+                //var records=$(this).closest("#tbl1, #tbl2").attr("table").find("tbody > tr");
+                //var records=$(this).parent("table").find("tbody > tr");
+                records2.sort(function(a,b){
+                    debugger;
+                    var value1=$(a).children("td").eq(column).text();
+                    debugger;
+                    var value2=$(b).children("td").eq(column).text();
+                    debugger;
+                    if (type=='num1'){
+                        value1 *=1;
+                        value2 *=1;
+                    }
+                    return (value1 < value2) ? -1 : (value1 > value2 ? 1 :0); 
+                    debugger;
+                });
+                records2.sort(function(a,b){
+                    debugger;
+                    var value1=$(a).children("td").eq(column).text();
+                    debugger;
+                    var value2=$(b).children("td").eq(column).text();
+                    debugger;
+                    if (type=='num1'){
+                        value1 *=1;
+                        value2 *=1;
+                    }
+                    return (value1 < value2) ? -1 : (value1 > value2 ? 1 :0); 
+                    debugger;
+                });
+                $.each(records2, function(index, row){
+                    
+                    var id = $(this).closest("table").attr("id");
+                    debugger;
+                    $(this).closest("#" +id + " tbody").append(row);
+
+                });
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+<table id="tbl1" class="table" border="1">
+<thead><tr><th class="num1">Id</th><th class="text1">Name</th><th class="num1">Marks</th></tr></thead> 
+    <tbody>
+    <tr><td>103</td><td>Hannah</td><td>285</td></tr>
+    <tr><td>126</td><td>Aron</td><td>509</td></tr>
+    <tr><td>83</td><td>Sarah</td><td>387</td></tr>
+    <tr><td>114</td><td>Aidan</td><td>403</td></tr>
+    <tr><td>99</td><td>Rose</td><td>545</td></tr>
+    </tbody>
+</table>
+    
+    <!--<br />
+    <br />-->
+    <table id="tbl2" class="table" border="1">
+        <thead><tr><th class="num1">Id</th><th class="text1">Name</th><th class="num1">Marks</th></tr></thead> 
+        <tbody>
+            <tr><td>203</td><td>John</td><td>285</td></tr>
+            <tr><td>226</td><td>Maiden</td><td>509</td></tr>
+            <tr><td>283</td><td>Simly</td><td>387</td></tr>
+            <tr><td>214</td><td>Anocolas</td><td>403</td></tr>
+            <tr><td>299</td><td>Roselind</td><td>545</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
